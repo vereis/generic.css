@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Industrial CSS</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/reset.css" rel="stylesheet" media="all">
+
+    <link href="css/generic.css" rel="stylesheet" media="all">
+
+</head>
+<body>
+    <header>
+        <h1> Here's a Hero Header </h1>
+        <h2> And a nice subtitle :) </h2>
+    </header>
+    <h1> Generic.css </h1>
+    <h2> A Classless CSS theme inspired by Sakura.css </h2>
+    <hr>
+    <p>
+        This is a sample paragraph
+    </p>
+    <p>
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+    </p>
+    <p>
+        We use standard styles for <em>italicised / emphasised</em>, <strong>strong / bold</strong>,
+        and <code>monospaced</code> text.
+    </p>
+    <ul>
+        <li> Heres a list </li>
+        <li> With several items </li>
+        <li> Contained within it </li>
+    </ul>
+    <strong> Quotations are styled fairly typically too </strong>
+    <blockquote>
+        Block quotes can be defined as followed in CSS:
+    </blockquote>
+
+    <pre><!--
+-->font-style: italic;
+margin: 0.5em 1.5em;
+padding-left: 0.75em;
+border-left: 2px solid #555555;<!--
+ --></pre>
+
+    <p>
+        All 6 Header Styles have been styled though does anyone even use them all?
+    </p>
+
+    <hr>
+    <h1> I'm a H1 </h1>
+    <h2> I'm a H2 </h2>
+    <h3> I'm a H3 </h3>
+    <h4> I'm a H4 </h4>
+    <h5> I'm a H5 </h5>
+    <h6> I'm a H6 </h6>
+    <hr>
+
+    <ol>
+        <li> Numbered lists </li>
+        <li> Look like this </li>
+        <ul>
+            <li> And nested lists </li>
+            <li> work too </li>
+        </ul>
+    </ol>
+
+    <p>
+        Links look like this: <a href="https://www.google.com">Click me!</a>
+    </p>
+
+    <p>
+        And tables are inspired from Sakura.css very much. You can hover them to highlight
+        the currently hovered row because thats just useful though.
+    </p>
+
+    <table>
+        <caption> A table </caption>
+        <tr>
+            <th> Heading 1 </th> <th> Heading 2 </th> <th> Heading 3 </th>
+        </tr>
+        <tr>
+            <td> Example </td> <td> Another example </td> <td> And yet another one </td>
+        </tr>
+        <tr>
+            <td> Example </td> <td> Another example </td> <td> And yet another one </td>
+        </tr>
+        <tr>
+            <td> Example </td> <td> Another example </td> <td> And yet another one </td>
+        </tr>
+    </table>
+    
+    <h2> Now the long awaited input items :) </h2>
+    
+    <hr>
+    
+    <form>
+        <fieldset>
+            <legend>
+                Input Fields
+            </legend>
+            <div>
+                 <label> 
+                    This be a label
+                    <input placeholder="Click me..." type="text">
+                </label>
+            </div>
+            <div>
+                <label> 
+                    Password Input
+                    <input placeholder="I'm secure!" type="password">
+                </label>
+
+            </div>
+            <div>
+                <label> 
+                    Search Input
+                    <input placeholder="..." type="search">
+                </label>
+            </div>
+            <div>
+                <label> 
+                    URL Input
+                    <input placeholder="www.google.com" type="url">
+                </label>
+            </div>
+            <div>
+                <label> 
+                    Email Input
+                    <input placeholder="contact@example.dev" type="email">
+                </label>
+            </div>
+            <div>
+                <label> 
+                    Phone Number
+                    <input placeholder="(999) 999-9999" type="tel">
+                </label>
+
+            </div>
+            <div>
+                <label> 
+                    Password Input
+                    <input placeholder="I'm secure!" type="password">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Number Input
+                    <input placeholder="Enter a Number" type="number">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Color Input
+                    <input placeholder="Color Input" type="color">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Disabled Input
+                    <input placeholder="Text Input" type="text" disabled>
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> Select Menu </legend>
+             <div>
+                <label>
+                    Select
+                    <select>
+                        <option>Option One</option>
+                        <option>Option Two</option>
+                        <option>Option Three</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Disabled Select
+                    <select disabled>
+                        <option>Option One</option>
+                        <option>Option Two</option>
+                        <option>Option Three</option>
+                    </select>
+                </label>
+            </div>
+
+       </fieldset>
+        <fieldset>
+            <legend> Checkboxes and Radios </legend>
+             <div>
+                <ul>
+                    <li> <label> <input type="checkbox"> Checkbox </label> </li>
+                    <li> <label> <input type="checkbox"> Checkbox </label> </li>
+                    <li> <label> <input type="checkbox"> Checkbox </label> </li>
+                    <li> <label> <input type="checkbox" disabled> Checkbox </label> </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li> <label> <input type="radio" name="x"> Radio </label> </li>
+                    <li> <label> <input type="radio" name="x"> Radio </label> </li>
+                    <li> <label> <input type="radio" name="x"> Radio </label> </li>
+                    <li> <label> <input type="radio" name="x" disabled> Radio </label> </li>
+                </ul>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> Text Area </legend>
+             <div>
+                <textarea rows="10" placeholder="Type in me">
+                </textarea>
+            </div>
+            <div>
+                <textarea disabled rows="10" placeholder="Type in me">
+                </textarea>
+            </div>
+       </fieldset>
+        <fieldset>
+            <legend> Buttons </legend>
+            <div>
+                <input value="Submit Button (Input)" type="submit"> 
+                <input value="Button Button (Input)" type="button"> 
+                <input value="Reset Button (Input)" type="reset">
+                <input value="Disabled Button (Input)" type="button" disabled>
+            </div>
+            <div>
+                <button type="submit">
+                    Submit Button (Button)
+                </button>
+                <button type="button"> 
+                    Button Button (Button)
+                </button>
+                <button type="reset">
+                    Reset Button (Button)
+                </button>
+                <button type="button" disabled>
+                    Disabled Button (Button)
+                </button>
+            </div>
+      </fieldset>
+    </form>
+</body>
+</html>

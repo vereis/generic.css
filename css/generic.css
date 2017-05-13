@@ -1,0 +1,334 @@
+@import 'https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Open+Sans:300,400,500';
+
+* {
+    box-sizing: border-box;   
+}
+
+body {
+    background-color: #FEFEFE;
+    color: #555555;
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Lato", "Arial", "Helvetica", sans-serif;
+    line-height: 1.75;
+    padding: 4em 4em;
+    font-size: 14px;
+}
+
+
+/* Header theme */
+body > header {
+    min-height: 300px;
+    height: 80vh;
+    width: 100vw;
+    max-width: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+    line-height: 1.1;
+    background: radial-gradient(circle, #E3E3E3, #D2D7DA);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+body > header > h1 {
+    position: relative;
+    font-size: 64px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body > header > h2 {
+    margin: 0;
+    position: relative;
+    font-size: 32px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body > header + * {
+    margin-top: 80vh;
+}
+
+/* Generic styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+caption,
+strong {
+    color: #333333;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5,
+h6,
+th,
+caption {
+    margin: 1rem 0 0.5rem 0;
+    font-family: "Open Sans";
+    font-weight: 600;
+    letter-spacing: 0.025em
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.15rem;
+}
+
+h6,
+caption,
+th {
+    font-size: 1rem;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: oblique;
+}
+
+p {
+   margin: 0.75em 0;
+}
+
+code,
+pre {
+    font-family: "Fira Mono", monospace;
+    background-color: #FAFAFA;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    font-size: 0.9rem;
+}
+
+pre {
+    padding: 1em;
+    margin: 0.5em 0;
+    font-family: monospace;
+}
+
+code {
+    padding: 0.15em 0.25em;
+    vertical-align: baseline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 1rem 0;
+}
+
+a {
+    color: #86adcc;
+    text-decoration: none;
+    padding: 0 0.1em;
+    height: 1.25em;
+    display: inline-block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+a:hover {
+    color: #86adcc;
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: justify;
+    margin: 2rem 0 2rem 0;
+}
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+td, th {
+    padding: 1rem;
+}
+
+th {
+    text-align: left;
+}
+
+ol,
+ul {
+    margin: 1rem;
+}
+
+ul {
+    list-style: square;
+}
+
+ul > ul, 
+ol > ol, 
+ul > ol, 
+ol > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ol {
+    list-style: plain;
+}
+
+li {
+    padding-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+small,
+sub,
+sup {
+    font-size: 0.75em;
+}
+
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 0.5em 1.5em;
+    padding-left: 0.75em;
+    border-left: 2px solid #555555;
+}
+
+/* Form Element stuff */
+
+fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.5rem 1.5rem;
+}
+
+label {
+    position: relative;
+}
+
+input, select, button {
+    font-family: "Lato", "Arial", "Helvetica", sans-serif;
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    padding: 0.25rem;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="color"],
+input[type="email"],
+input[type="password"],
+input[type="search"] {
+    display: block;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="color"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: #FEFEFE;
+    cursor: pointer;
+}
+
+
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+select {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+textarea {
+    font-family: "Lato";
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.5rem;
+    min-height: 1rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+textarea[disabled],
+select[disabled],
+input[disabled],
+button[disabled],
+input[disabled]::placeholder,
+textarea[disabled]::placeholder {
+    color: #AAAAAA;
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.03);
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+
