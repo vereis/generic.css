@@ -1,17 +1,34 @@
 @import 'https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Open+Sans:300,400,500';
 
+:root {
+    --font-header: "Open Sans", "Arial", "Helvetica", sans-serif;
+    --font-main: "Lato", "Arial", "Helvetica", sans-serif;
+    --font-mono: "Fira Mono", monospace;
+
+    --font-size: 16px;
+
+    --font-color-normal: #555555;
+    --font-color-header: #222222;
+    --font-color-link:   #86adcc;
+
+    --background-color: #FEFEFE;
+    --background-color-darker: #F8F8F8; 
+    --background-color-darkest: #EDEDED;
+    --background-color-hero: radial-gradient(circle, #E3E3E3, #D2D7DA);
+}
+
 * {
     box-sizing: border-box;   
 }
 
 html {
-    font-family: "Lato", "Arial", "Helvetica", sans-serif;
-    font-size: 16px;
+    font-family: var(--font-main);
+    font-size: var(--font-size);
 }
 
 body {
-    background-color: #FEFEFE;
-    color: #555555;
+    background-color: var(--background-color-odd);
+    color: var(--font-color-normal);
     margin: 0 auto;
     max-width: 800px;
     line-height: 1.75;
@@ -30,24 +47,26 @@ body > header {
     left: 0;
     position: absolute;
     line-height: 1.1;
-    background: radial-gradient(circle, #E3E3E3, #D2D7DA);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+    background: var(--background-color-hero);
+    border-bottom: 1px solid var(--background-color-darkest);
     padding: 4em 1em;
+}
+
+body > header > * {
+    text-align: center;
 }
 
 body > header > h1 {
     position: relative;
     font-size: 4em;
-    filter: drop-shadow(0em 0em 1.5em #555555);
-    text-align: center;
+    filter: drop-shadow(0em 0em 1.5em #333333);
 }
 
 body > header > h2 {
     margin: 0;
     position: relative;
     font-size: 2.5em;
-    filter: drop-shadow(0em 0em 1.5em #555555);
-    text-align: center;
+    filter: drop-shadow(0em 0em 1.5em #333333);
 }
 
 body > header + * {
@@ -64,7 +83,7 @@ h6,
 th,
 caption,
 strong {
-    color: #333333;
+    color: var(--font-color-header);
 }
 
 h1, 
@@ -76,7 +95,7 @@ h6,
 th,
 caption {
     margin: 1rem 0 0.5rem 0;
-    font-family: "Open Sans";
+    font-family: var(--font-header);
     font-weight: 600;
     letter-spacing: 0.025em
 }
@@ -122,8 +141,7 @@ p {
 code,
 pre {
     font-family: "Fira Mono", monospace;
-    background-color: #FAFAFA;
-    border: 1px solid rgba(0, 0, 0, 0.02);
+    background-color: var(--background-color-darker);
     font-size: 0.9rem;
 }
 
@@ -141,17 +159,16 @@ code {
 hr {
     border: 0;
     height: 1px;
-    background: rgba(0, 0, 0, 0.08);
+    background: var(--background-color-darkest);
     margin: 1rem 0;
 }
 
 a {
-    color: #86adcc;
+    color: var(--font-color-link); 
     text-decoration: none;
     padding: 0 0.1em;
     height: 1.25em;
     display: inline-block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
 a:hover {
@@ -167,11 +184,11 @@ table {
 }
 
 tr {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--background-color-darkest);
 }
 
 tr:hover {
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: var(--background-color-darker);
 }
 
 td, th {
@@ -223,12 +240,12 @@ blockquote {
     font-style: italic;
     margin: 0.5em 1.5em;
     padding-left: 0.75em;
-    border-left: 2px solid #555555;
+    border-left: 2px solid var(--font-color-normal);
 }
 
 /* Form Element stuff */
 fieldset {
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--background-color-darkest);
     padding: 0.5rem 1.5rem;
 }
 
@@ -237,11 +254,11 @@ label {
 }
 
 input, select, button {
-    font-family: "Lato", "Arial", "Helvetica", sans-serif;
+    font-family: var(--font-main);
     font-size: 1em;
     margin: 0 0 1rem 0;
     padding: 0.25rem;
-    color: #555555;
+    color: var(--font-color-normal);
 }
 
 input[type="text"],
@@ -255,7 +272,7 @@ input[type="search"] {
     display: block;
     background-color: inherit;
     border: none;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid var(--background-color-darkest);
 }
 
 input[type="text"]:focus,
@@ -266,7 +283,7 @@ input[type="color"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus {
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--background-color-darkest);
 }
 
 input[type="submit"],
@@ -276,8 +293,8 @@ button {
     display: inline-block;
     padding: 0.5rem;
     margin: 0.25rem;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    background-color: #FEFEFE;
+    border: 1px solid var(--background-color-darkest);
+    background-color: var(--background-color-odd);
     cursor: pointer;
 }
 
@@ -285,14 +302,14 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 button:hover {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: var(--background-color-darker);
 }
 
 select {
     display: block;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--background-color-darkest);
     padding: 0.25rem 0.5rem;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: var(--background-color-darker);
 }
 
 input[type="checkbox"],
@@ -302,12 +319,12 @@ input[type="radio"] {
 }
 
 textarea {
-    font-family: "Lato";
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-family: var(--font-main);
+    border: 1px solid var(--background-color-darkest);
     padding: 0.5rem;
     min-height: 1rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: var(--background-color-darker);
 }
 
 textarea[disabled],
@@ -318,7 +335,7 @@ input[disabled]::placeholder,
 textarea[disabled]::placeholder {
     color: #AAAAAA;
     cursor: not-allowed;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: var(--background-color-darker);
     text-decoration: line-through;
 }
 
@@ -349,11 +366,11 @@ textarea[disabled]::placeholder {
     }
 
     td {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid var(--background-color-darkest);
     }
 
     td:hover {
-        background-color: rgba(0, 0, 0, 0.01);
+        background-color: var(--background-color-darker);
     }
 
     td[data-label] {

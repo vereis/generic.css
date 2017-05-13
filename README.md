@@ -6,11 +6,8 @@ A classes css theme based on Sakura.css which you can check out [here](https://g
 Apply this to any plain text site to get it styled elegantly and looking sharp. 
 
 ## Upcoming Changes:
-- Use CSS Variables to customise theme
 - Add bookmarklet
 - Add styling for section, aside and footer
-- Clean up code repitition
-- Add media queries to change padding and fontside
 
 ## See `generic.css` in action
 Check it out on `rawgit` [here](https://rawgit.com/vereis/generic.css/master/index.html)
