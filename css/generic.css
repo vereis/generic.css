@@ -4,15 +4,18 @@
     box-sizing: border-box;   
 }
 
+html {
+    font-family: "Lato", "Arial", "Helvetica", sans-serif;
+    font-size: 16px;
+}
+
 body {
     background-color: #FEFEFE;
     color: #555555;
     margin: 0 auto;
     max-width: 800px;
-    font-family: "Lato", "Arial", "Helvetica", sans-serif;
     line-height: 1.75;
-    padding: 4em 4em;
-    font-size: 16px;
+    padding: 4em;
 }
 
 /* Header theme */
@@ -29,7 +32,7 @@ body > header {
     line-height: 1.1;
     background: radial-gradient(circle, #E3E3E3, #D2D7DA);
     border-bottom: 1px solid rgba(0, 0, 0, 0.02);
-    padding: 4em 0;
+    padding: 4em 1em;
 }
 
 body > header > h1 {
@@ -321,8 +324,12 @@ textarea[disabled]::placeholder {
 
 /* Media Queries */
 @media (max-width: 34em) {
-    body {
+    html {
         font-size: 12px;
+    }
+
+    body {
+        padding: 1.5em;
     }
 
     table, table * {
