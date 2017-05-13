@@ -13,7 +13,7 @@ Apply this to any plain text site to get it styled elegantly and looking sharp.
 - Add media queries to change padding and fontside
 
 ## See `generic.css` in action
-Coming soon
+Check it out on `rawgit` [here](https://rawgit.com/vereis/generic.css/master/index.html)
 
 ## Installation
 1) Download `Generic.css`:
