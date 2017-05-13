@@ -8,18 +8,19 @@ body {
     background-color: #FEFEFE;
     color: #555555;
     margin: 0 auto;
-    max-width: 50em;
+    max-width: 800px;
     font-family: "Lato", "Arial", "Helvetica", sans-serif;
     line-height: 1.75;
     padding: 4em 4em;
-    font-size: 14px;
+    font-size: 16px;
 }
-
 
 /* Header theme */
 body > header {
-    min-height: 300px;
-    height: 80vh;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100vw;
     max-width: none;
     top: 0;
@@ -28,23 +29,22 @@ body > header {
     line-height: 1.1;
     background: radial-gradient(circle, #E3E3E3, #D2D7DA);
     border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+    padding: 4em 0;
 }
 
 body > header > h1 {
     position: relative;
-    font-size: 64px;
+    font-size: 4em;
+    filter: drop-shadow(0em 0em 1.5em #555555);
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 body > header > h2 {
     margin: 0;
     position: relative;
-    font-size: 32px;
+    font-size: 2.5em;
+    filter: drop-shadow(0em 0em 1.5em #555555);
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 body > header + * {
@@ -176,6 +176,7 @@ td, th {
 }
 
 th {
+    text-transform: uppercase;
     text-align: left;
 }
 
@@ -223,7 +224,6 @@ blockquote {
 }
 
 /* Form Element stuff */
-
 fieldset {
     border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 0.5rem 1.5rem;
@@ -278,15 +278,12 @@ button {
     cursor: pointer;
 }
 
-
-
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 button:hover {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 
 select {
     display: block;
@@ -322,7 +319,47 @@ textarea[disabled]::placeholder {
     text-decoration: line-through;
 }
 
+/* Media Queries */
+@media (max-width: 34em) {
+    body {
+        font-size: 12px;
+    }
 
+    table, table * {
+        display: block;
+    }
+    
+    tr {
+        border: none;
+    }
+
+    tr:hover {
+        background-color: initial;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    td:hover {
+        background-color: rgba(0, 0, 0, 0.01);
+    }
+
+    td[data-label] {
+        text-align: right;
+    }
+
+    td[data-label]:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
 
 
 
