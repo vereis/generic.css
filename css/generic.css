@@ -59,28 +59,6 @@ body > header {
     padding: 4em 1em;
 }
 
-body > header > nav {
-    display: block;
-    text-align: center;
-    position: absolute;
-    bottom: 4em;
-    width: 100%;
-}
-
-body > header > nav > ol,
-body > header > nav > ul,
-body > header > nav > ul > li,
-body > header > nav > ol > li {
-    display: inline;
-    list-style: none;
-    color: var(--colorscheme-accent-two);
-}
-
-body > header > nav a {
-    color: var(--colorscheme-accent-two);
-    padding: 0 1em;
-}
-
 body > header > * {
     text-align: center;
 }
@@ -98,6 +76,21 @@ body > header > h2 {
 
 body > header + * {
     margin-top: 80vh;
+}
+
+body > header + nav:before {
+    content: "Navigation: ";
+    padding-right: 1em;
+}
+
+body > header + nav {
+    margin-top: calc(80vh - 1em);
+    margin-bottom: 2em;
+}
+
+body > header + nav a {
+    padding: 0.25em;
+    margin: 0 0.5em;
 }
 
 /* Generic styling */
