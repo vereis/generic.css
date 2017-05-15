@@ -3,18 +3,26 @@
 :root {
     --font-header: "Open Sans", "Arial", "Helvetica", sans-serif;
     --font-main: "Lato", "Arial", "Helvetica", sans-serif;
-    --font-mono: "Fira Mono", monospace;
+    --font-mono: "Menlo", "Fira Mono", monospace;
 
     --font-size: 16px;
 
-    --font-color-normal: #555555;
-    --font-color-header: #222222;
-    --font-color-link:   #86adcc;
+    /* Primary ysed for hero gradient and links */
+    --colorscheme-accent-one: #6FC0AA;
+    --colorscheme-accent-two: #4A73A1;
 
-    --background-color: #FEFEFE;
-    --background-color-darker: #F8F8F8; 
-    --background-color-darkest: #EDEDED;
-    --background-color-hero: radial-gradient(circle, #E3E3E3, #D2D7DA);
+    /* Background color and the general colors of borders 
+     * or hovered elements */
+    --colorscheme-bg-light: #FAFAFA;
+    --colorscheme-bg-dark: #DDDDDD;
+
+    /* Normal text vs Header text vs Pre */
+    --colorscheme-fg-dark: #132A44;
+    --colorscheme-fg-light: #475F7B;
+    --colorscheme-fg-code: #666666;
+
+    
+    --hero-gradient: radial-gradient(circle, var(--colorscheme-accent-one), var(--colorscheme-accent-two));
 }
 
 * {
@@ -27,8 +35,8 @@ html {
 }
 
 body {
-    background-color: var(--background-color-odd);
-    color: var(--font-color-normal);
+    background-color: var(--colorscheme-bg-light);
+    color: var(--colorscheme-fg-light);
     margin: 0 auto;
     max-width: 800px;
     line-height: 1.75;
@@ -47,7 +55,7 @@ body > header {
     left: 0;
     position: absolute;
     line-height: 1.1;
-    background: var(--background-color-hero);
+    background: var(--hero-gradient);
     border-bottom: 1px solid var(--background-color-darkest);
     padding: 4em 1em;
 }
@@ -59,14 +67,12 @@ body > header > * {
 body > header > h1 {
     position: relative;
     font-size: 4em;
-    filter: drop-shadow(0em 0em 1.5em #333333);
 }
 
 body > header > h2 {
     margin: 0;
     position: relative;
     font-size: 2.5em;
-    filter: drop-shadow(0em 0em 1.5em #333333);
 }
 
 body > header + * {
@@ -83,7 +89,7 @@ h6,
 th,
 caption,
 strong {
-    color: var(--font-color-header);
+    color: var(--colorscheme-fg-dark);
 }
 
 h1, 
@@ -141,7 +147,8 @@ p {
 code,
 pre {
     font-family: "Fira Mono", monospace;
-    background-color: var(--background-color-darker);
+    color: var(--colorscheme-fg-code);
+    background-color: var(--colorscheme-bg-dark);
     font-size: 0.9rem;
 }
 
@@ -159,12 +166,12 @@ code {
 hr {
     border: 0;
     height: 1px;
-    background: var(--background-color-darkest);
+    background: var(--colorscheme-bg-dark);
     margin: 1rem 0;
 }
 
 a {
-    color: var(--font-color-link); 
+    color: var(--colorscheme-accent-one); 
     text-decoration: none;
     padding: 0 0.1em;
     height: 1.25em;
@@ -172,7 +179,7 @@ a {
 }
 
 a:hover {
-    color: #86adcc;
+    color: var(--colorscheme-accent-two);
     text-decoration: underline;
 }
 
@@ -184,11 +191,11 @@ table {
 }
 
 tr {
-    border-bottom: 1px solid var(--background-color-darkest);
+    border-bottom: 1px solid var(--colorscheme-bg-dark);
 }
 
 tr:hover {
-    background-color: var(--background-color-darker);
+    background-color: var(--colorscheme-bg-dark);
 }
 
 td, th {
@@ -238,14 +245,15 @@ img {
 
 blockquote {
     font-style: italic;
-    margin: 0.5em 1.5em;
+    margin: 0.5em 1.5em 0.75em 1.5em;
     padding-left: 0.75em;
-    border-left: 2px solid var(--font-color-normal);
+    padding-bottom: 0.25em;
+    border-left: 0.25em solid var(--colorscheme-fg-dark);
 }
 
 /* Form Element stuff */
 fieldset {
-    border: 1px solid var(--background-color-darkest);
+    border: 1px solid var(--colorscheme-bg-dark);
     padding: 0.5rem 1.5rem;
 }
 
@@ -258,7 +266,7 @@ input, select, button {
     font-size: 1em;
     margin: 0 0 1rem 0;
     padding: 0.25rem;
-    color: var(--font-color-normal);
+    color: var(--colorscheme-fg-light);
 }
 
 input[type="text"],
@@ -272,7 +280,7 @@ input[type="search"] {
     display: block;
     background-color: inherit;
     border: none;
-    border-bottom: 1px solid var(--background-color-darkest);
+    border-bottom: 1px dotted var(--colorscheme-bg-dark);
 }
 
 input[type="text"]:focus,
@@ -283,7 +291,7 @@ input[type="color"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus {
-    border-bottom: 1px solid var(--background-color-darkest);
+    border-bottom: 1px dotted var(--colorscheme-fg-light);
 }
 
 input[type="submit"],
@@ -293,8 +301,8 @@ button {
     display: inline-block;
     padding: 0.5rem;
     margin: 0.25rem;
-    border: 1px solid var(--background-color-darkest);
-    background-color: var(--background-color-odd);
+    border: 1px solid var(--colorscheme-bg-dark);
+    background-color: var(--colorscheme-bg-light);
     cursor: pointer;
 }
 
@@ -302,14 +310,14 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 button:hover {
-    background-color: var(--background-color-darker);
+    background-color: var(--colorscheme-bg-dark);
 }
 
 select {
     display: block;
-    border: 1px solid var(--background-color-darkest);
+    border: 1px solid var(--colorscheme-bg-dark);
     padding: 0.25rem 0.5rem;
-    background-color: var(--background-color-darker);
+    background-color: var(--colorscheme-bg-light);
 }
 
 input[type="checkbox"],
@@ -320,11 +328,10 @@ input[type="radio"] {
 
 textarea {
     font-family: var(--font-main);
-    border: 1px solid var(--background-color-darkest);
+    border: 1px solid var(--colorscheme-bg-dark);
     padding: 0.5rem;
     min-height: 1rem;
     width: 100%;
-    background-color: var(--background-color-darker);
 }
 
 textarea[disabled],
@@ -335,7 +342,7 @@ input[disabled]::placeholder,
 textarea[disabled]::placeholder {
     color: #AAAAAA;
     cursor: not-allowed;
-    background-color: var(--background-color-darker);
+    opacity: 0.5;
     text-decoration: line-through;
 }
 
@@ -366,11 +373,11 @@ textarea[disabled]::placeholder {
     }
 
     td {
-        border-bottom: 1px solid var(--background-color-darkest);
+        border-bottom: 1px solid var(--colorscheme-bg-dark);
     }
 
     td:hover {
-        background-color: var(--background-color-darker);
+        background-color: var(--colorscheme-bg-dark);
     }
 
     td[data-label] {
