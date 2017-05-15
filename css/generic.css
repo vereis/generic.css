@@ -21,7 +21,6 @@
     --colorscheme-fg-light: #475F7B;
     --colorscheme-fg-code: #666666;
 
-    
     --hero-gradient: radial-gradient(circle, var(--colorscheme-accent-one), var(--colorscheme-accent-two));
 }
 
@@ -58,6 +57,28 @@ body > header {
     background: var(--hero-gradient);
     border-bottom: 1px solid var(--background-color-darkest);
     padding: 4em 1em;
+}
+
+body > header > nav {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 4em;
+    width: 100%;
+}
+
+body > header > nav > ol,
+body > header > nav > ul,
+body > header > nav > ul > li,
+body > header > nav > ol > li {
+    display: inline;
+    list-style: none;
+    color: var(--colorscheme-accent-two);
+}
+
+body > header > nav a {
+    color: var(--colorscheme-accent-two);
+    padding: 0 1em;
 }
 
 body > header > * {
