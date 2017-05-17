@@ -1,8 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Open+Sans:300,400,500';
+@import 'https://fonts.googleapis.com/css?family=Fira+Mono|Noto+Serif|Noto+Sans:300,400,500';
 
 :root {
-    --font-header: "Open Sans", "Arial", "Helvetica", sans-serif;
-    --font-main: "Lato", "Arial", "Helvetica", sans-serif;
+    --font-header: "Noto Sans", "Arial", "Helvetica", sans-serif;
+    --font-main: "Noto Serif", "Arial", "Helvetica", sans-serif;
     --font-mono: "Menlo", "Fira Mono", monospace;
 
     --font-size: 16px;
@@ -39,7 +39,7 @@ body {
     color: var(--colorscheme-fg-light);
     margin: 0 auto;
     max-width: 800px;
-    line-height: 1.75;
+    line-height: 2;
     padding: 4em;
 }
 
@@ -54,10 +54,14 @@ body > header {
     top: 0;
     left: 0;
     position: absolute;
-    line-height: 1.1;
+    line-height: 1.5;
     background: var(--hero-gradient);
     border-bottom: 1px solid var(--background-color-darkest);
     padding: 4em 1em;
+}
+
+body > header > * {
+    z-index: 1;
 }
 
 body > header > img {
@@ -70,9 +74,11 @@ body > header > img {
     object-fit: cover;
     opacity: 0.75;
     transform: translate3d(0, 0, 0);
+    z-index: 0;
 }
 
-body > header > * {
+body > header > h1,
+body > header > h2 {
     text-align: center;
 }
 
@@ -85,6 +91,17 @@ body > header > h2 {
     margin: 0;
     position: relative;
     font-size: 2.5em;
+}
+
+body > header > nav {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+}
+
+body > header > nav a {
+    color: var(--colorscheme-fg-dark);
+    margin: 0 0.5rem;
 }
 
 body > header + * {
@@ -157,6 +174,46 @@ h6,
 caption,
 th {
     font-size: 1rem;
+}
+
+h1 + h1,
+h1 + h2,
+h1 + h3,
+h1 + h4,
+h1 + h5,
+h1 + h6,
+h2 + h1,
+h2 + h2,
+h2 + h3,
+h2 + h4,
+h2 + h5,
+h2 + h6,
+h3 + h1,
+h3 + h2,
+h3 + h3,
+h3 + h4,
+h3 + h5,
+h3 + h6,
+h4 + h1,
+h4 + h2,
+h4 + h3,
+h4 + h4,
+h4 + h5,
+h4 + h6,
+h5 + h1,
+h5 + h2,
+h5 + h3,
+h5 + h4,
+h5 + h5,
+h5 + h6,
+h6 + h1,
+h6 + h2,
+h6 + h3,
+h6 + h4,
+h6 + h5,
+h6 + h6 {
+    margin-top: -0.5rem;
+    margin-bottom: 0;
 }
 
 b, strong {
@@ -307,7 +364,8 @@ input[type="search"] {
     display: block;
     background-color: inherit;
     border: none;
-    border-bottom: 1px dotted var(--colorscheme-bg-dark);
+    border-bottom: 1px solid var(--colorscheme-bg-dark);
+    transition: 0.5s ease-in-out border-bottom;
 }
 
 input[type="text"]:focus,
@@ -318,7 +376,7 @@ input[type="color"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus {
-    border-bottom: 1px dotted var(--colorscheme-fg-light);
+    border-bottom: 1px solid var(--colorscheme-fg-light);
 }
 
 input[type="submit"],
@@ -331,13 +389,14 @@ button {
     border: 1px solid var(--colorscheme-bg-dark);
     background-color: var(--colorscheme-bg-light);
     cursor: pointer;
+    transition: 0.5s ease-in-out border-color;
 }
 
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 button:hover {
-    background-color: var(--colorscheme-bg-dark);
+    border: 1px solid var(--colorscheme-fg-dark);
 }
 
 select {
@@ -345,6 +404,11 @@ select {
     border: 1px solid var(--colorscheme-bg-dark);
     padding: 0.25rem 0.5rem;
     background-color: var(--colorscheme-bg-light);
+    transition: 0.5s ease-in-out border-color;
+}
+
+select:hover {
+    border: 1px solid var(--colorscheme-fg-dark);
 }
 
 input[type="checkbox"],
@@ -376,7 +440,7 @@ textarea[disabled]::placeholder {
 /* Media Queries */
 @media (max-width: 50em) {
     :root {
-        --hero-height: 80vh;
+        --hero-height: 90vh;
         --font-size: 12px;
     }
 
