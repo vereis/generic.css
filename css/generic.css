@@ -22,7 +22,7 @@
     --colorscheme-fg-code: #666666;
 
     --hero-gradient: radial-gradient(circle, var(--colorscheme-accent-one), var(--colorscheme-accent-two));
-    --hero-height: 100vh;
+    --hero-height: 84vh;
 }
 
 * {
@@ -49,7 +49,7 @@ body > header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     max-width: none;
     top: 0;
     left: 0;
